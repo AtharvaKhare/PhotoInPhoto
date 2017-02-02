@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 7635527bfbcca443d9768eca2b312316
+timeCreated: 1485540525
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Puzzle0_0
+    21300002: Puzzle0_1
+    21300004: Puzzle0_2
+    21300006: Puzzle0_3
+    21300008: Puzzle0_4
+    21300010: Puzzle0_5
+    21300012: Puzzle0_6
+    21300014: Puzzle0_7
+    21300016: Puzzle0_8
+    21300018: Puzzle0_9
+    21300020: Puzzle0_10
+    21300022: Puzzle0_11
+    21300024: Puzzle0_12
+    21300026: Puzzle0_13
+    21300028: Puzzle0_14
+    21300030: Puzzle0_15
+    21300032: Puzzle0_16
+    21300034: Puzzle0_17
+    21300036: Puzzle0_18
+    21300038: Puzzle0_19
+    21300040: Puzzle0_20
+    21300042: Puzzle0_21
+    21300044: Puzzle0_22
+    21300046: Puzzle0_23
+    21300048: Puzzle0_24
+    21300050: Puzzle0_25
+    21300052: Puzzle0_26
+    21300054: Puzzle0_27
+    21300056: Puzzle0_28
+    21300058: Puzzle0_29
+    21300060: Puzzle0_30
+    21300062: Puzzle0_31
+    21300064: Puzzle0_32
+    21300066: Puzzle0_33
+    21300068: Puzzle0_34
+    21300070: Puzzle0_35
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Puzzle0_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_2
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_4
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 416.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_7
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_8
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_11
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 333.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_13
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_14
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_15
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_16
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_17
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 250.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_19
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_20
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_21
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_22
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_23
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 167.66666
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_25
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_26
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_27
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_28
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_29
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 84.666664
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_31
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_32
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_34
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Puzzle0_35
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 1.6666641
+        width: 83.333336
+        height: 83.333336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

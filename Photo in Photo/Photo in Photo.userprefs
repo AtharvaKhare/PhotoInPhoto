@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PuzzleSpawn.cs">
+    <Files>
+      <File FileName="Assets/Scripts/UIManagerScript.cs" Line="66" Column="37" />
+      <File FileName="Assets/Scripts/MovePiece.cs" Line="21" Column="3" />
+      <File FileName="Assets/Scripts/PuzzleSpawn.cs" Line="27" Column="3" />
+      <File FileName="Assets/Scripts/MenuScreenUI.cs" Line="13" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
