@@ -18,13 +18,18 @@ public class UIManagerScript : MonoBehaviour {
 	public Transform EndMarkerCoverImage;
 	public Transform EndMarkerLogo;
 	public float speed = 100.0f;
+
+
 	Vector3 temp0, temp1, temp2;
+	Toast toast;
 
 	private bool LoginButtonPressed = false, AboutButtonPressed = false, CoverScreenAnimationDone = false;
 	private float ButtonWidth, ButtonHeight, ConstButtonWidth, ConstButtonHeight;
 
 	void Awake()
 	{
+
+		toast = new Toast();
 		UserIdInput.image.rectTransform.sizeDelta = new Vector3 (0, 0, 0);
 		PasswordInput.image.rectTransform.sizeDelta = new Vector3 (0, 0, 0);
 		ActualLoginButton.image.rectTransform.sizeDelta = new Vector3 (0, 0, 0);
@@ -32,16 +37,6 @@ public class UIManagerScript : MonoBehaviour {
 		temp1 = new Vector3( Screen.width / 2,  Screen.height / 8, 0);
 		Logo.rectTransform.position = temp0;
 
-		//
-		//
-		//
-		//
-		/*
-		temp0.x = Screen.width / 2;
-		temp0.y = Screen.height / 4;
-		EndMarkerCoverImage.position = temp0;
-		*/
-		Debug.Log (Screen.width + " " + Screen.height);
 
 		temp2.x = ConstButtonWidth = ButtonWidth = LoginButton.image.rectTransform.rect.width;
 		temp2.y = ConstButtonHeight = ButtonHeight = LoginButton.image.rectTransform.rect.height;
@@ -53,12 +48,27 @@ public class UIManagerScript : MonoBehaviour {
 
 	void Start()
 	{
+		PersistantValues.Load ();
+		toast.AndroidToast ("App by Atharva Khare");
 	}
+
 
 	public void LoginButtonOnClick()
 	{
 		LoginButtonPressed = true;
-		Debug.Log (Logo.rectTransform.position.x + " " + Logo.rectTransform.position.y);
+	}
+
+	public void VerifyLogin()
+	{
+		PersistantValues.currentTeam = PersistantValues.TeamsDatabase [int.Parse(UserIdInput.text)];
+		string password = Crypto.Md5Sum (PersistantValues.currentTeam.UserID + PersistantValues.currentTeam.Name);
+		Debug.Log ("Password: " + password.Substring (0, 6));
+		if (PasswordInput.text == password.Substring(0,6))
+			LoginSuccessful ();
+		else
+			toast.AndroidToast ("Invalid User ID or Password!");
+
+
 	}
 
 	public void LoginSuccessful() 
@@ -112,4 +122,5 @@ public class UIManagerScript : MonoBehaviour {
 			}
 		}
 	}
+
 }

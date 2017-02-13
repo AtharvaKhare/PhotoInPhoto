@@ -11,15 +11,19 @@ public class MovePiece : MonoBehaviour {
 	// pieceStatus = 2 -> locked
 	public float mousePosX;
 	public float mousePosY;
-	// Use this for initialization
-	void Start () {
 
-	}
 
-	// Update is called once per frame
+	public ParticleSystem placedAnimation;
+
+
+	ParticleSystem lowerAnimation;
+	ParticleSystem upperAnimation;
+	ParticleSystem rightAnimation;
+	ParticleSystem leftAnimation;
+
+
 	void Update () 
 	{
-
 		//If piece is picked up
 		if (pieceStatus == 1)
 		{
@@ -27,6 +31,15 @@ public class MovePiece : MonoBehaviour {
 			Vector2 objectPosition = Camera.main.ScreenToWorldPoint (mousePosition);
 			transform.position = objectPosition;
 		}
+
+		if (lowerAnimation && !lowerAnimation.IsAlive()) {
+			Destroy (lowerAnimation);
+			Destroy (upperAnimation);
+			Destroy (rightAnimation);
+			Destroy (leftAnimation);
+		}
+
+
 
 	}
 
@@ -37,24 +50,59 @@ public class MovePiece : MonoBehaviour {
 			if (!Input.GetMouseButton (0)) {
 				transform.position = socket.gameObject.transform.position;
 				pieceStatus = 2;
+				GetComponent<Renderer> ().sortingOrder = 0;
+				ParticleSystem.ShapeModule tempShapeModule;
+				Vector3 temp1 = GetComponent<SpriteRenderer> ().bounds.max;
+				Vector3 temp0 = GetComponent<SpriteRenderer> ().bounds.min;
+				float offset = (temp1.x - temp0.x)/2;
+				temp0.x = temp0.x + offset;
+				lowerAnimation = Instantiate (placedAnimation, temp0, Quaternion.Euler(0, 0, 180));
+				lowerAnimation.name = gameObject.name + "lowerAnimation";
+				tempShapeModule = lowerAnimation.GetComponent<ParticleSystem> ().shape;
+				tempShapeModule.radius = offset;
+
+				temp0.y = temp0.y + 2 * offset;
+				upperAnimation = Instantiate (placedAnimation, temp0, Quaternion.identity);
+				upperAnimation.name = gameObject.name + "upperAnimation";
+				tempShapeModule = upperAnimation.GetComponent<ParticleSystem> ().shape;
+				tempShapeModule.radius =  offset;
+
+				temp1.y = temp1.y - offset;
+				rightAnimation = Instantiate (placedAnimation, temp1, Quaternion.Euler(0, 0, 270));
+				rightAnimation.name = gameObject.name + "rightAnimation";
+				tempShapeModule = rightAnimation.GetComponent<ParticleSystem> ().shape;
+				tempShapeModule.radius = offset;
+
+				temp1.x = temp1.x - 2 * offset;
+				leftAnimation = Instantiate (placedAnimation, temp1, Quaternion.Euler(0, 0, 90));
+				leftAnimation.name = gameObject.name + "leftAnimation";
+				tempShapeModule = leftAnimation.GetComponent<ParticleSystem> ().shape;
+				tempShapeModule.radius = offset;
+
+
+
 				Destroy (GetComponent<BoxCollider2D>());
+				Destroy (socket.GetComponent<BoxCollider2D>());
+				Destroy (GetComponent<Rigidbody2D>());
 			}
 		}
 	}
 
 	void OnMouseDrag()
 	{
+		
 		if (pieceStatus == 0) {
 			//Piece is picked up
 			pieceStatus = 1;
-		}
+			GetComponent<Renderer> ().sortingOrder = 10;
+		} 
 	}
 
 	void OnMouseUp()
 	{
 		if (pieceStatus == 1) {
-			//Piece is dropped
 			pieceStatus = 0;
+			GetComponent<Renderer> ().sortingOrder = 0;
 		}
 	}
 }

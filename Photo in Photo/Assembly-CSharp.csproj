@@ -46,10 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundScript.cs" />
+     <Compile Include="Assets\Scripts\DatabaseSaveLoad.cs" />
+     <Compile Include="Assets\Scripts\FourPicScript.cs" />
      <Compile Include="Assets\Scripts\MenuScreenUI.cs" />
      <Compile Include="Assets\Scripts\MovePiece.cs" />
      <Compile Include="Assets\Scripts\PuzzleSpawn.cs" />
+     <Compile Include="Assets\Scripts\RiddleScript.cs" />
+     <Compile Include="Assets\Scripts\TempScript.cs" />
      <Compile Include="Assets\Scripts\UIManagerScript.cs" />
+     <Compile Include="Assets\Scripts\Utilities.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>

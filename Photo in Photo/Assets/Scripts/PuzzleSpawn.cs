@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PuzzleSpawn : MonoBehaviour {
@@ -17,6 +18,8 @@ public class PuzzleSpawn : MonoBehaviour {
 	public Button arrangeAll;
 	public Button startGameButton;
 
+	public GameObject jigsawOutlineLeft, jigsawOutlineRight, jigsawOutlineUp, jigsawOutlineDown;
+
 	private float frameSize;
 	private Camera currentCamera;
 	private Sprite[] sprites;
@@ -25,20 +28,28 @@ public class PuzzleSpawn : MonoBehaviour {
 
 	void Awake()
 	{
+		
 	}
 
-	// Use this for initialization
 	void Start () 
 	{
-		
-		startGameButton.onClick.AddListener (startGame);
+		//startGameButton.onClick.AddListener (startGame);
+		if (PersistantValues.currentTeam.jigsawPuzzleCompleted [PersistantValues.puzzleNumber]) {
+			startGame ();
+			arrange ();
+		}
+		else {
+			startGame ();
+		}
 	}
 
-	// Update is called once per frame
+
 	void Update () 
 	{
 		if (Input.GetKeyDown(KeyCode.Escape)) 
-			Application.Quit(); 	
+			SceneManager.LoadScene("MenuScreen", LoadSceneMode.Single); 	
+		if(check())
+			PersistantValues.currentTeam.jigsawPuzzleCompleted [PersistantValues.puzzleNumber] = true;
 	}
 
 	void startGame()
@@ -50,12 +61,11 @@ public class PuzzleSpawn : MonoBehaviour {
 
 		if (offsetY < 100) {
 			offsetY = 100;
-			Debug.Log ("OffsetY is out of bound. Setting to 100 pixels.");
+
 		}
 
-
 		int count = 0, randomX , randomYIndex;
-		int[] randomY = {(int) (padding + 25),(int) (-offsetY + padding + frameSize + 50), (int) (-offsetY + 2 * padding + frameSize + 50)} ;
+		int[] randomY = {(int) (padding + 25),(int) (offsetY + padding + frameSize + 50), (int) (offsetY + 2 * padding + frameSize + 50)} ;
 		float limit = rows / 2 * padding, limitX = Screen.width - offsetX;
 
 		Vector3 spawnSocketLocation;
@@ -64,7 +74,9 @@ public class PuzzleSpawn : MonoBehaviour {
 		GameObject spawnedImage;
 		Vector3 randomPosition;
 
-		sprites = Resources.LoadAll<Sprite>(texture.name);
+		sprites = Resources.LoadAll<Sprite>(PersistantValues.puzzleName);
+		if (sprites == null)
+			Debug.Log ("Sprites not loaded!");
 
 
 		randomPosition = currentCamera.ScreenToWorldPoint (new Vector3(0, 0, -10));
@@ -90,7 +102,7 @@ public class PuzzleSpawn : MonoBehaviour {
 			{
 				count += 1;
 
-				spawnSocketLocation = currentCamera.ScreenToWorldPoint (new Vector3 (i , j + Screen.height / 2 - offsetY, 10));
+				spawnSocketLocation = currentCamera.ScreenToWorldPoint (new Vector3 (i , j + Screen.height / 2 - offsetY, 50));
 				spawnedSocket = (GameObject) Instantiate (socket, spawnSocketLocation, Quaternion.identity);
 				spawnedSocket.name = "Image" + count + "Socket";
 
@@ -104,6 +116,41 @@ public class PuzzleSpawn : MonoBehaviour {
 
 			}
 
+		//
+		float sizeX = GameObject.Find("Image1").transform.localScale.x *100 * 5;
+		float sizeY = GameObject.Find("Image1").transform.localScale.y *100 * 5;
+		Vector3 jigsawOutlineLocation;
+		Vector2 jigsawOutlineSize = new Vector2 (Screen.width / 80 , sizeY + 2 * Screen.height / 160);
+		jigsawOutlineLeft.transform.localScale = jigsawOutlineSize;
+		jigsawOutlineRight.transform.localScale= jigsawOutlineSize;
+
+		jigsawOutlineLocation = GameObject.Find("Image11Socket").transform.position;
+		jigsawOutlineLocation.x -= GameObject.Find ("Image11").transform.localScale.y / 2 + jigsawOutlineSize.x / 200;
+		jigsawOutlineLeft.transform.position = jigsawOutlineLocation;
+
+		jigsawOutlineLocation = GameObject.Find("Image15Socket").transform.position;
+		jigsawOutlineLocation.x += GameObject.Find("Image15").transform.localScale.y / 2 + jigsawOutlineSize.x / 200;
+		jigsawOutlineRight.transform.position = jigsawOutlineLocation;
+
+
+		jigsawOutlineSize = new Vector2 (Screen.width / 80 , 5 * padding);
+		jigsawOutlineSize.x = sizeX + 2 * Screen.width / 80;
+		jigsawOutlineSize.y = Screen.height / 160;
+		jigsawOutlineUp.transform.localScale = jigsawOutlineSize;
+		jigsawOutlineDown.transform.localScale= jigsawOutlineSize;
+
+
+		jigsawOutlineLocation = GameObject.Find("Image3Socket").transform.position;
+		jigsawOutlineLocation.y += GameObject.Find("Image3").transform.localScale.y / 2 + jigsawOutlineSize.y / 200;
+		jigsawOutlineUp.transform.position = jigsawOutlineLocation;
+
+		jigsawOutlineLocation = GameObject.Find("Image23Socket").transform.position;
+		jigsawOutlineLocation.y -= GameObject.Find("Image23").transform.localScale.y / 2 + jigsawOutlineSize.y / 200;
+		jigsawOutlineDown.transform.position = jigsawOutlineLocation;
+
+
+		//
+
 		arrangeAll.onClick.AddListener (arrange);
 
 	}
@@ -111,11 +158,29 @@ public class PuzzleSpawn : MonoBehaviour {
 	void arrange()
 	{
 		GameObject socketSpawn1, socketSpawn2;
-		for (int i = 1; i <= 36; ++i) {
+		for (int i = 1; i <= rows * cols; ++i) {
 			socketSpawn1 = GameObject.Find ("Image" + i);
 			socketSpawn2 = GameObject.Find ("Image" + i + "Socket");
 			socketSpawn1.transform.position = socketSpawn2.transform.position;
 		}
+	}
+
+	bool check()
+	{
+		GameObject imageObj, socketObj;
+		for (int i = 1; i <= rows * cols; ++i) {
+			imageObj = GameObject.Find ("Image" + i);
+			socketObj = GameObject.Find ("Image" + i + "Socket");
+			if (imageObj.transform.position != socketObj.transform.position)
+				return false;
+		}
+		return true;
+	}
+
+	public void OnExitButtonClick()
+	{
+		SceneManager.LoadScene("MenuScreen", LoadSceneMode.Single);
+
 	}
 
 }
