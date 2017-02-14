@@ -11,3 +11,7 @@ Please note the format is:
 <Login ID>        Team Number: <Password>
 The team password is login page password. Subsequent passwords are for levels. Please refrain from using login ID 0 as it was for testing.
 You can mail me anytime for any help at khareatharva ( at ) gmail ( dot ) com.
+
+![alt tag](https://github.com/AtharvaKhare/PhotoInPhoto/blob/master/Screenshots/Login%20Screen.png)
+![alt tag](https://github.com/AtharvaKhare/PhotoInPhoto/blob/master/Screenshots/Level%20Screen.png)
+![alt tag](https://github.com/AtharvaKhare/PhotoInPhoto/blob/master/Screenshots/Jigsaw%20Screen.png)
