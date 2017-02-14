@@ -5,10 +5,6 @@ It features basic login page, level login page, a jigsaw game, and a basic "four
 The apk "GithubBuild" as well as the project has been stripped of most photos to reduce its size. Other two apk still feature missing pictures.
 
 
-![alt tag](https://github.com/AtharvaKhare/Android-Apps/blob/master/Screenshots/Login%20Screen.png)
-![alt tag](https://github.com/AtharvaKhare/Android-Apps/blob/master/Screenshots/Level%20Screen.png)
-![alt tag](https://github.com/AtharvaKhare/PhotoInPhoto/blob/master/Screenshots/Jigsaw%20Screen.png)
-
 Directions of use: Minimum API level is Android 4.0 -  Ice Cream Sandwich.
 Installation and first run take good amount of time so be patient. Each build is provided with passwords.txt (which also gets generated at persistant data path for convenience). 
 Please note the format is:
